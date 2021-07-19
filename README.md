@@ -8,8 +8,13 @@ I have always wanted to get into computer vision combined with AI and I think I 
 
 ### What has been done so far? ###
 
-I am still busy with the main foundation of the software.
-From there I will be able to upgrade it and add more features. I will also try to remember to update this Readme so that people that are interested can track my progress. Fun
+I am done with the main foundation of the software.
+Now I will be upgrading it and add more features. I will also try to remember to update this Readme so that people that are interested can track my progress. Fun
+
+What's completed:
+
+-[x] Screen Capture
+-[x] Line Detection
 
 ### How to install and why Python? ###
 
