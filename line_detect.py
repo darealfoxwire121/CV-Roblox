@@ -3,7 +3,7 @@ import numpy as np
 import math
 
 def get_lines(image):
-    lines_list = cv2.HoughLines(image, 1, np.pi / 180, 200)
+    lines_list = cv2.HoughLinesP(image, 1, np.pi / 180, 200)
     return lines_list
 
 def add_canny(image):
@@ -16,17 +16,10 @@ def add_canny(image):
 
 def draw_lines(image, lines_list):
     if lines_list is not None:
-        for line in lines_list:
-            rho = line[0][0]
-            theta = line[0][1]
-            a = math.cos(theta)
-            b = math.sin(theta)
-            x0 = a * rho
-            y0 = b * rho
-            pt1 = (int(x0 + 1000*(-b)), int(y0 + 1000*(a)))
-            pt2 = (int(x0 - 1000*(-b)), int(y0 - 1000*(a)))
-
-            cv2.line(image, pt1, pt2, (255, 100, 100), 3, 2)
+        for i in range(0, len(lines_list)):
+            line_arr = lines_list[i][0]
+            
+            cv2.line(image, (line_arr[0], line_arr[1]), (line_arr[2], line_arr[3]), (255, 100, 100), 3, cv2.LINE_AA)
     else:
         pass
         # print("No lines found")
