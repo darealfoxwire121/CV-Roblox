@@ -13,8 +13,8 @@ Now I will be upgrading it and add more features. I will also try to remember to
 
 What's completed:
 
--[x] Screen Capture  
--[x] Line Detection
+- [x] Screen Capture  
+- [x] Line Detection
 
 ### How to install and why Python? ###
 
