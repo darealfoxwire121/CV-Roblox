@@ -22,6 +22,6 @@ Unfortunately Python is the best language for machine learning. That's the only 
 
 * [Download Python](www.python.org)
 
-* Run the script and the **first time** it will install all the necessary libraries for you. Just wait until it's finished and enjoy.
+* Run the script **main.py** and the **first time** it will install all the necessary libraries for you. Just wait until it's finished and enjoy.
 
 *(Please note that this script **should** work on linux and mac OS, but I haven't tested it)*
