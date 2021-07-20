@@ -8,8 +8,8 @@ def mainloop(windowname):
     
     while True:
         image = getscreen(windowname, 200, 2, 2)
-        FinalImage = draw_lines(image, detect_lines(image))
+        FinalImage = draw_lines(image, detect_lines(image, 50, 10, 200))
 
         displayImage(windowname, image=FinalImage) 
 
-mainloop("Lightshot")
+mainloop("File Explorer")

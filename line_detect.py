@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 import math
 
-def get_lines(image):
-    lines_list = cv2.HoughLinesP(image, 1, np.pi / 180, 200)
+def get_lines(image, minlength, gap, thresh):
+    lines_list = cv2.HoughLinesP(image, 1, np.pi / 180, minLineLength=minlength, maxLineGap=gap, threshold=thresh)
     return lines_list
 
 def add_canny(image):
@@ -26,7 +26,7 @@ def draw_lines(image, lines_list):
         
     return image
 
-def detect_lines(image):
+def detect_lines(image, minlength, gap, thresh):
     canny = add_canny(image)
-    lines = get_lines(canny)
+    lines = get_lines(canny, minlength, gap, thresh)
     return lines
